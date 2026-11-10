@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B89A6A"/><stop offset=".6" stop-color="#8B6A2E"/><stop offset="1" stop-color="#B98A2A"/></linearGradient>
+<linearGradient id="arch" x1="0" x2="1"><stop offset="0" stop-color="#E9C99A"/><stop offset=".5" stop-color="#C79A5E"/><stop offset="1" stop-color="#F1D8AE"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="#8E1A12"/>
+<path d="M500 1000 V420 A300 300 0 0 1 1100 420 V1000Z" fill="url(#arch)"/>
+<path d="M560 1000 V430 A240 240 0 0 1 1040 430 V1000Z" fill="url(#sky)"/>
+<ellipse cx="860" cy="430" rx="230" ry="150" fill="#3F2A10" opacity=".85"/><ellipse cx="760" cy="500" rx="150" ry="100" fill="#4B3214" opacity=".8"/>
+<rect x="560" y="700" width="480" height="300" fill="#B2862E"/>
+<g font-family="'Snell Roundhand','Brush Script MT',Georgia,serif" font-style="italic" font-size="120" fill="#F2E3C6" text-anchor="middle"><text x="800" y="420">Join Our</text><text x="800" y="560">Executive</text><text x="800" y="700">Board</text></g>
+</svg>

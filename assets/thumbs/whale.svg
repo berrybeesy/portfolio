@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8FBFF"/><stop offset=".55" stop-color="#BDEBFF"/><stop offset="1" stop-color="#D8DEFF"/></linearGradient>
+<linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FB7D9"/><stop offset="1" stop-color="#2F7FA8"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<text x="260" y="300" font-family="Pretendard,sans-serif" font-weight="700" font-size="44" fill="#111"><tspan x="260">Redesigning</tspan><tspan x="260" dy="56">Customization</tspan><tspan x="260" dy="56">Experience</tspan></text>
+<text x="260" y="220" font-family="Pretendard,sans-serif" font-weight="800" font-size="34" fill="#111">whale</text>
+<rect x="720" y="160" width="760" height="560" rx="10" fill="#0c0c0c"/>
+<rect x="790" y="220" width="620" height="440" rx="14" fill="#fff"/>
+<rect x="815" y="275" width="570" height="120" rx="8" fill="url(#sea)"/>
+<path d="M1010 395 L1120 300 L1220 350 L1300 290 L1385 340 L1385 395Z" fill="#2E8B6A"/>
+<g fill="#e9ecf2"><rect x="815" y="420" width="150" height="80" rx="6" fill="#111"/><rect x="1095" y="420" width="150" height="80" rx="6" fill="#2a3470"/>
+<rect x="815" y="540" width="130" height="80" rx="6" fill="#555"/><rect x="960" y="540" width="130" height="80" rx="6" fill="#26507a"/><rect x="1105" y="540" width="130" height="80" rx="6" fill="#c9d3dd"/><rect x="1250" y="540" width="130" height="80" rx="6" fill="#e7b9c3"/></g>
+<circle cx="1440" cy="520" r="120" fill="#d9d9d4"/><circle cx="1405" cy="490" r="18" fill="#bdbdb6"/><circle cx="1470" cy="560" r="26" fill="#c4c4bd"/>
+<text x="260" y="860" font-family="Pretendard,sans-serif" font-size="20" fill="#333">Responsive Web Desktop   ·   Client NaverWhale   ·   Tools Figma</text>
+</svg>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teresa Park</title>
+  <meta name="description" content="Teresa Park — Product Designer · Design Engineer" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+    <span class="menu-btn__bar"></span>
+    <span class="menu-btn__bar menu-btn__bar--v"></span>
+  </button>
+
+  <!-- MENU: 오른쪽 위 버튼에서 원이 퍼지며 화면을 채움 -->
+  <nav class="menu" id="menu" aria-label="Menu" aria-hidden="true">
+    <div class="menu__inner">
+      <ul class="menu__list">
+        <li><button class="menu__item" type="button" data-panel="about"><span data-i18n="mAbout">ABOUT</span><sup>(1)</sup></button></li>
+        <li><button class="menu__item" type="button" data-panel="project"><span data-i18n="mProject">PROJECT</span><sup>(2)</sup></button></li>
+        <li><button class="menu__item" type="button" data-panel="contact"><span data-i18n="mContact">CONTACT</span><sup>(3)</sup></button></li>
+        <li><button class="menu__item" type="button" data-panel="language"><span data-i18n="mLanguage">LANGUAGE</span><sup>(4)</sup></button></li>
+      </ul>
+      <div class="menu__panels">
+        <div class="menu__panel menu__panel--project" data-panel="project"></div>
+        <div class="menu__panel menu__panel--contact" data-panel="contact">
+          <p class="mp-name">Teresa Park</p>
+          <a class="mp-line" href="mailto:t.park@utah.edu">t.park@utah.edu</a>
+          <p class="mp-phones"><a href="tel:+821054757127">+82 10-5475-7127</a><a href="tel:+18016346235">+1 8016346235</a></p>
+          <p class="mp-links"><a href="https://www.linkedin.com/in/parkteresa/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:t.park@utah.edu" data-i18n="email">Email</a><a href="https://cal.com/teresapark/30min" target="_blank" rel="noopener" data-i18n="scheduleShort">Schedule</a></p>
+        </div>
+        <div class="menu__panel menu__panel--language" data-panel="language">
+          <button type="button" data-lang="en" lang="en">English</button>
+          <button type="button" data-lang="ko" lang="ko">한국어</button>
+          <button type="button" data-lang="ja" lang="ja">日本語</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PROJECT DETAIL: 누른 자리에서 #111 검정 화면이 펼쳐지며 열림 -->
+  <div class="pv" id="pv" role="dialog" aria-modal="true" aria-label="Project" aria-hidden="true">
+    <div class="pv__scroll" data-lenis-prevent>
+      <header class="pv__intro">
+        <dl class="pv__meta">
+          <div><dt data-i18n="pvYear">Year</dt><dd data-pv="year"></dd></div>
+          <div><dt data-i18n="pvDevice">Device</dt><dd data-pv="device"></dd></div>
+          <div><dt data-i18n="pvTimeline">Timeline</dt><dd data-pv="timeline"></dd></div>
+          <div><dt data-i18n="pvCollab">Collaboration</dt><dd data-pv="collaboration"></dd></div>
+        </dl>
+        <h2 class="pv__title" data-pv="title"></h2>
+      </header>
+      <section class="pv__body">
+        <div class="pv__about">
+          <h3 data-pv="aboutTitle"></h3>
+          <div class="pv__about-text" data-pv-about></div>
+          <ol class="pv__roles" data-pv-roles hidden></ol>
+          <p class="pv__note" data-pv="note"></p>
+        </div>
+        <figure class="pv__hero"><img data-pv-img alt="" decoding="async"></figure>
+        <div class="pv__caption"><span data-pv="captionL"></span><span data-pv="captionR"></span></div>
+        <section class="pv__series" data-pv-series hidden></section>
+        <div class="pv__gallery" data-pv-gallery></div>
+        <div class="pv__credits" data-pv-credits hidden></div>
+        <p class="pv__soon" data-i18n="pvSoon">Full case study coming soon.</p>
+        <p class="pv__soon-big" data-pv-soonbig hidden></p>
+        <button class="pv__next" type="button">
+          <span class="pv__next-label" data-i18n="pvNext">Next Project</span>
+          <span class="pv__next-row"><strong data-pv="nextTitle"></strong>
+            <span class="arrow-btn"><svg viewBox="0 0 24 24"><path d="M1 12h22M15 4l8 8-8 8"/></svg></span></span>
+        </button>
+      </section>
+    </div>
+    <!-- 아래쪽 유리 효과: 내려갈수록 점점 더 흐려짐 -->
+    <div class="pv__glass" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <main>
+    <div class="flow">
+    <section class="hero" aria-label="Selected work">
+      <div class="stage">
+        <div class="top">
+          <div class="heading" aria-live="polite">
+            <h2 class="heading__title"><span class="hv" data-field="title"></span></h2>
+            <i class="hl"></i>
+            <div class="heading__row"><span class="hk" data-i18n="year">Year</span><span class="hv" data-field="year"></span></div>
+            <i class="hl"></i>
+            <div class="heading__row"><span class="hk" data-i18n="role">Role</span><span class="hv" data-field="role"></span></div>
+            <i class="hl"></i>
+            <div class="heading__row"><span class="hk" data-i18n="category">Category</span><span class="hv" data-field="category"></span></div>
+            <i class="hl"></i>
+          </div>
+
+          <div class="carousel" role="list"></div>
+
+          <div class="hero-bar">
+            <p class="hero-bar__left"><span class="hero-bar__slot" aria-hidden="true">Teresa Park</span><i class="bar-probe"></i></p>
+            <div class="scroll-hint" aria-hidden="true"><span class="scroll-hint__inner"><span>scroll</span><span class="scroll-hint__arrow">↓</span><span>down</span></span></div>
+            <p class="hero-bar__right" data-i18n="barRole">Product Designer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 이름 섹션: 인트로 하단 왼쪽의 "Teresa Park"이 스크롤을 따라 커지며 이 섹션 가운데로 와서 파랗게 채워짐 -->
+    <section class="name-sec" aria-label="Teresa Park"></section>
+
+    <p class="name-sub"><span data-i18n="sub1">Product Designer</span><span class="name-sub__dot">◦</span><span data-i18n="sub2">Design Engineer</span></p>
+    <h1 class="name"><span class="name__text">Teresa Park</span><i class="name__probe"></i></h1>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <p class="sec-label"><span data-i18n="secAbout">ABOUT</span> <span>(2)</span></p>
+      <p class="about__lead" data-fill data-i18n-lead="lead">Hi! I'm Teresa, a curious designer who brings ideas to life through design and code. I focus on defining the right problems, understanding user needs, and finding solutions driven by data through data insights.</p>
+      <div class="about__table">
+        <div class="about__row">
+          <span class="about__k" data-i18n="keyword">KEYWORD</span>
+          <ul class="pills">
+            <li class="is-accent" data-i18n="pill0">product design</li><li data-i18n="pill1">user research</li><li data-i18n="pill2">usability testing</li><li data-i18n="pill3">interaction design</li><li data-i18n="pill4">prototyping</li><li data-i18n="pill5">design systems</li><li data-i18n="pill6">AI-assisted workflow</li><li data-i18n="pill7">cross-functional collaboration</li>
+          </ul>
+        </div>
+        <div class="about__row">
+          <span class="about__k" data-i18n="roleK">ROLE</span>
+          <span class="about__v" data-i18n="roleV">PRODUCT DESIGNER, DESIGN ENGINEER</span>
+        </div>
+      </div>
+      <div class="about__meta">
+        <span data-i18n="basedMeta">Based in Salt Lake City, UT, USA</span>
+        <span class="avail"><i></i><span data-i18n="avail">Available</span></span>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section class="works" id="works">
+      <p class="sec-label"><span data-i18n="secWorks">WORKS</span> <span class="works__count"></span></p>
+      <ul class="works__list"></ul>
+      <div class="works__thumb" aria-hidden="true"><div class="works__thumb-inner"></div></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <p class="sec-label"><span data-i18n="secContact">CONTACT</span> <span>(6)</span></p>
+      <div class="contact__row">
+        <p class="contact__lead" data-i18n-html="contactLead">Let's Build Something<br>Meaningful Together</p>
+        <a class="contact__cta" href="https://cal.com/teresapark/30min" target="_blank" rel="noopener"><span class="cta-roll"><span class="cta-roll__t" data-i18n="schedule">Schedule a Call</span></span>
+          <span class="arrow-btn arrow-btn--sm"><svg viewBox="0 0 24 24"><path d="M1 12h22M15 4l8 8-8 8"/></svg></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: 위쪽 가장자리가 능선처럼 계속 흘러가는 파란 배경 -->
+  <footer class="footer">
+    <svg class="footer__edge" aria-hidden="true" preserveAspectRatio="none"><path/></svg>
+    <div class="footer__body">
+      <div class="footer__info">
+        <dl>
+          <dt data-i18n="fBased">Based in</dt><dd data-i18n="fCity">Salt Lake City, UT</dd>
+          <dt data-i18n="fConnect">Connect</dt>
+          <dd class="footer__links"><a href="https://www.linkedin.com/in/parkteresa/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:t.park@utah.edu" data-i18n="email">Email</a><a href="assets/resume.pdf" target="_blank" rel="noopener" data-i18n="resume">Resume</a></dd>
+        </dl>
+        <p class="footer__copy">© 2026 Teresa Park</p>
+      </div>
+      <p class="footer__name">TERESA PARK</p>
+    </div>
+  </footer>
+
+  <script src="js/projects.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sections.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="js/smooth.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/project.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

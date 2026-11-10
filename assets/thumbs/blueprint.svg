@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3b6fe0" stroke-width="1" opacity=".5"/></pattern></defs>
+<rect width="1600" height="1000" fill="#F1F1F3"/>
+<rect x="240" y="170" width="1120" height="640" rx="40" fill="#111"/>
+<rect x="290" y="210" width="940" height="520" fill="#0A3FB3"/><rect x="290" y="210" width="940" height="520" fill="url(#g)"/>
+<g fill="none" stroke="#DCE8FF" stroke-width="2" opacity=".9">
+<ellipse cx="760" cy="470" rx="220" ry="150"/><ellipse cx="760" cy="470" rx="160" ry="105"/><ellipse cx="760" cy="470" rx="90" ry="60"/>
+<path d="M560 470 Q760 250 960 470 Q760 690 560 470Z"/><path d="M600 300 L920 640 M920 300 L600 640"/>
+<rect x="680" y="410" width="160" height="120" rx="14"/></g>
+<rect x="290" y="690" width="940" height="4" fill="#5577aa"/><rect x="290" y="690" width="220" height="4" fill="#ff2a2a"/>
+<text x="300" y="770" font-family="Pretendard,sans-serif" font-size="22" fill="#eee">Cinema 4D Tutorial – Creating Blueprint Style Renders Using Sketch &amp; Toon</text>
+</svg>
