@@ -16,7 +16,7 @@
       basedMeta: 'Based in Salt Lake City, UT, USA', avail: 'Available, {MON} {Y}',
       contactLead: "Let's Build Something<br>Meaningful Together", schedule: 'Schedule a Call', scheduleShort: 'Schedule',
       fBased: 'Based in', fCity: 'Salt Lake City, UT', fConnect: 'Connect', email: 'Email', resume: 'Resume',
-      mAbout: 'ABOUT', mProject: 'PROJECT', mContact: 'CONTACT', mLanguage: 'LANGUAGE',
+      mAbout: 'ABOUT', mProject: 'PROJECT', mResume: 'RESUME', resumeView: 'View Resume (PDF)', resumeDesc: 'Product Designer · Design Engineer', mContact: 'CONTACT', mLanguage: 'LANGUAGE',
       pvYear: 'Year', pvDevice: 'Device', pvTimeline: 'Timeline', pvCollab: 'Collaboration', pvSoon: 'Full case study coming soon.', pvNext: 'Next Project',
     },
     ko: {
@@ -31,7 +31,7 @@
       basedMeta: '미국 유타주 솔트레이크시티 거주', avail: '{Y}년 {M}월부터 가능',
       contactLead: '함께 의미 있는 것을<br>만들어요', schedule: '미팅 예약하기', scheduleShort: '미팅 예약',
       fBased: '거주지', fCity: '유타주 솔트레이크시티', fConnect: '연결', email: '이메일', resume: '이력서',
-      mAbout: '소개', mProject: '프로젝트', mContact: '연락처', mLanguage: '언어',
+      mAbout: '소개', mProject: '프로젝트', mResume: '이력서', resumeView: '이력서 보기 (PDF)', resumeDesc: '프로덕트 디자이너 · 디자인 엔지니어', mContact: '연락처', mLanguage: '언어',
       pvYear: '연도', pvDevice: '기기', pvTimeline: '기간', pvCollab: '협업', pvSoon: '전체 케이스 스터디는 곧 공개됩니다.', pvNext: '다음 프로젝트',
     },
     ja: {
@@ -46,7 +46,7 @@
       basedMeta: '米国ユタ州ソルトレイクシティ在住', avail: '{Y}年{M}月より対応可能',
       contactLead: '一緒に意味のあるものを<br>つくりましょう', schedule: '打ち合わせを予約', scheduleShort: '予約',
       fBased: '拠点', fCity: 'ユタ州ソルトレイクシティ', fConnect: 'つながる', email: 'メール', resume: '履歴書',
-      mAbout: 'プロフィール', mProject: 'プロジェクト', mContact: 'お問い合わせ', mLanguage: '言語',
+      mAbout: 'プロフィール', mProject: 'プロジェクト', mResume: '履歴書', resumeView: '履歴書を見る (PDF)', resumeDesc: 'プロダクトデザイナー · デザインエンジニア', mContact: 'お問い合わせ', mLanguage: '言語',
       pvYear: '年', pvDevice: 'デバイス', pvTimeline: '期間', pvCollab: 'コラボレーション', pvSoon: 'ケーススタディは近日公開予定です。', pvNext: '次のプロジェクト',
     },
   };

@@ -81,6 +81,7 @@
     it.addEventListener('focus', () => select(name));
     it.addEventListener('click', () => {
       if (name === 'about') goTo('#about');
+      else if (name === 'resume') window.open('assets/resume.pdf', '_blank', 'noopener');
       else select(name);
     });
   });
