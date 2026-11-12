@@ -14,9 +14,9 @@ window.PROJECTS = [
   {
     id: 'naverwhale',
     title: 'NaverWhale Redesign',
-    role: 'UX Research · Prototype',
+    role: 'UI/UX Designer',
     year: '2024',
-    category: 'UX Research',
+    category: 'Prototype, UX Research, Wireframe',
     tags: 'Product · Web',
     thumb: 'assets/thumbs/whale.svg',
     shape: 2,
