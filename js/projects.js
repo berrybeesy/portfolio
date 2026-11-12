@@ -24,9 +24,9 @@ window.PROJECTS = [
   },
   {
     id: 'adobe',
-    title: 'Adobe Student Ambassador @ UofU',
-    role: 'Student Leader',
-    year: '2026',
+    title: 'Adobe Ambassador @ U of U',
+    role: 'President, Vice-President',
+    year: '2025 - 2026',
     category: 'Student Leader',
     tags: 'Organization',
     thumb: 'assets/projects/adobe/join.webp',
@@ -93,7 +93,7 @@ window.PROJECT_DETAILS = {
   },
   adobe: {
     title: 'Adobe Ambassador',
-    year: '2025',
+    year: '2025 - 2026',
     device: 'Instagram, Campus',
     timeline: 'Jan 2025 - Present',
     collaboration: 'Adobe Student Ambassadors',
