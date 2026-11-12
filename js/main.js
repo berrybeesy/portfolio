@@ -172,7 +172,7 @@
       const r = base * (offset + grow * (u / (turns * TAU))) + n;
       d += `${k ? 'L' : 'M'}${f1(cx + Math.cos(a) * rx * r)} ${f1(cy + Math.sin(a) * ry * r)}`;
     }
-    return d;
+    return draw >= 0.999 && turns === 1 && !grow ? d + 'Z' : d;   // 다 그려지면 끊김 없이 닫힘
   }
 
   /* ------------------------------------------------------------------ */
@@ -491,8 +491,8 @@
     if (h > 0.002) {
       const d1 = easeInOut(clamp(h / 0.85));
       const d2 = easeInOut(clamp((h - 0.15) / 0.85));
-      c.l1.setAttribute('d', linePath(c.tab, cx, cy, 1, 1, t, c.seed, 1.08, d1, 1.07, 0.03));
-      c.l2.setAttribute('d', linePath(c.tab, cx, cy, 1, 1, t * 1.13 + 3, c.seed + 2.4, 1.05, d2, 1.13, -0.03));
+      c.l1.setAttribute('d', linePath(c.tab, cx, cy, 1, 1, t, c.seed, 1, d1, 1.06, 0));
+      c.l2.setAttribute('d', linePath(c.tab, cx, cy, 1, 1, t * 1.13 + 3, c.seed + 0.6, 1, d2, 1.13, 0));
       c.linesOn = true;
     } else if (c.linesOn) {
       c.l1.setAttribute('d', '');
