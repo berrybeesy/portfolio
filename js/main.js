@@ -322,7 +322,7 @@
     // 모양 기준 크기 U, 카드 박스는 호버로 커질 여유를 두고 크게
     U = mobile ? Math.min(W * 0.6, H * 0.33) : Math.min(W * 0.42, H * 0.57);
     // 모양을 가로로 넓게: 모든 모양의 절반 폭을 HALF 로 맞춤 (화면 폭의 약 72%)
-    const HALF = mobile ? W * 0.47 : Math.min(W * 0.36, H * 1.2);
+    const HALF = mobile ? W * 0.47 : Math.min(W * 0.41, H * 1.35);
     cardW = HALF * 2.3;
     cardH = U * 1.7;
     spacing = W * 0.5 + HALF * 1.2;   // 가운데 하나만 보이고 양옆은 화면 밖 (넘길 때 밖에서 들어옴)
