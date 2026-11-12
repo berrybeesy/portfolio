@@ -4,7 +4,7 @@ window.PROJECTS = [
     id: 'moment',
     title: 'Moment',
     role: 'UX/UI Designer',
-    year: '2025',
+    year: '2026',
     category: 'UXUI',
     tags: 'AI · Video Learning',
     thumb: 'assets/projects/moment/thumb.webp',
@@ -48,9 +48,9 @@ window.WORKS = [
 window.PROJECT_DETAILS = {
   moment: {
     title: 'Moment',
-    year: '2025',
+    year: '2026',
     device: 'Desktop, iPad',
-    timeline: 'Feb - Mar | 1 month',
+    timeline: 'Feb - Mar 2026 | 1 month',
     collaboration: '2 other developers',
     aboutTitle: 'About Moment',
     about: [
