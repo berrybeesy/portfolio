@@ -202,6 +202,7 @@
   let tiltNow = 0;
   function updateFooter(H, t) {
     const r = edge.getBoundingClientRect();
+    document.documentElement.classList.toggle('at-footer', footer.getBoundingClientRect().top < H * 0.6);
     if (r.bottom < 0 || r.top > H) return;          // 화면 밖이면 계산 안 함
     const w = r.width, h = r.height;
     fm.on = lerp(fm.on, fm.onT, 0.08);

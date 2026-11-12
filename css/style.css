@@ -1,13 +1,13 @@
 /* ---------- Fonts ---------- */
-@font-face { font-family: 'Pretendard'; font-weight: 200; font-display: swap; src: url('../assets/fonts/Pretendard-ExtraLight.otf') format('opentype'); }
-@font-face { font-family: 'Pretendard'; font-weight: 300; font-display: swap; src: url('../assets/fonts/Pretendard-Light.otf') format('opentype'); }
-@font-face { font-family: 'Pretendard'; font-weight: 700; font-display: swap; src: url('../assets/fonts/Pretendard-Bold.otf') format('opentype'); }
-@font-face { font-family: 'Pretendard'; font-weight: 800; font-display: swap; src: url('../assets/fonts/Pretendard-ExtraBold.otf') format('opentype'); }
-@font-face { font-family: 'Pretendard'; font-weight: 900; font-display: swap; src: url('../assets/fonts/Pretendard-Black.otf') format('opentype'); }
-/* 업로드에 없는 Regular / Medium / SemiBold 는 공식 CDN에서 로드 (나중에 파일 받으면 로컬로 교체) */
-@font-face { font-family: 'Pretendard'; font-weight: 400; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2'); }
-@font-face { font-family: 'Pretendard'; font-weight: 500; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2') format('woff2'); }
-@font-face { font-family: 'Pretendard'; font-weight: 600; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2') format('woff2'); }
+/* Pretendard 전부 사이트 안에서 직접 제공 (외부 CDN 차단 시 아이폰 기본 글꼴로 바뀌며 외곽선 글씨가 깨지던 문제) */
+@font-face { font-family: 'Pretendard'; font-weight: 200; font-style: normal; font-display: swap; src: url('../assets/fonts/Pretendard-ExtraLight.subset.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-weight: 300; font-style: normal; font-display: swap; src: url('../assets/fonts/Pretendard-Light.subset.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-weight: 400; font-style: normal; font-display: swap; src: url('../assets/fonts/Pretendard-Regular.subset.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-weight: 500; font-style: normal; font-display: swap; src: url('../assets/fonts/Pretendard-Medium.subset.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-weight: 600; font-style: normal; font-display: swap; src: url('../assets/fonts/Pretendard-SemiBold.subset.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-weight: 700; font-style: normal; font-display: swap; src: url('../assets/fonts/Pretendard-Bold.subset.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-weight: 800; font-style: normal; font-display: swap; src: url('../assets/fonts/Pretendard-ExtraBold.subset.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-weight: 900; font-style: normal; font-display: swap; src: url('../assets/fonts/Pretendard-Black.subset.woff2') format('woff2'); }
 
 /* ---------- Tokens ---------- */
 :root {
@@ -24,6 +24,9 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; background: var(--bg); color: var(--ink); overscroll-behavior-x: none; }
+/* 맨 아래(푸터)에 오면 화면 밖 영역(아이폰 아래 막대 뒤, 튕김 영역)도 파랗게 — js/sections.js 가 토글 */
+html { transition: background-color .2s; }
+html.at-footer { background: var(--blue); }
 body {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -613,7 +616,7 @@ html.menu-open, html.menu-open body { overflow: hidden; }
   position: relative;
   display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
   min-height: 62vh;
-  padding: 2vh var(--m) clamp(20px, 3vh, 36px);
+  padding: 2vh var(--m) calc(clamp(20px, 3vh, 36px) + env(safe-area-inset-bottom));
   background: var(--blue);
 }
 .footer__info { align-self: stretch; display: flex; flex-direction: column; }
@@ -654,7 +657,11 @@ html.menu-open, html.menu-open body { overflow: hidden; }
   .pills { justify-content: flex-start; }
   .about__v { text-align: left; }
   .contact__row { flex-direction: column; align-items: flex-start; }
-  .footer__body { flex-direction: column; align-items: flex-start; }
+  .footer__body { flex-direction: column; align-items: flex-start; justify-content: space-between; min-height: 72vh; }
+  .footer__info { align-self: stretch; }
+  .footer__info dl { margin: 9vh 0 0; }          /* Based in 을 조금 아래로 */
+  .footer__copy { margin-top: 4vh; }
+  .footer__name { align-self: center; }
   .works__thumb { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
