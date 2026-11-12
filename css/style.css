@@ -484,6 +484,10 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 }
 .about__k { flex: none; }
 .about__v { text-align: right; }
+.about__link { color: var(--ink); text-decoration: none; transition: color .25s; }
+.about__link:hover { color: var(--blue); }
+.about__link span { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; text-decoration-color: transparent; transition: text-decoration-color .25s; }
+.about__link:hover span { text-decoration-color: currentColor; }
 .pills { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .pills li {
   padding: .35em .85em; border: 1px solid var(--ink); border-radius: 999px;
