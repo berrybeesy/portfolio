@@ -400,11 +400,12 @@
     }
   }, { passive: false });
 
-  const drag = { on: false, x: 0, y: 0, last: 0, moved: false, id: null };
+  const drag = { on: false, x: 0, y: 0, last: 0, moved: false, id: null, start: 0, t0: 0 };
   track.addEventListener('pointerdown', (e) => {
     if (e.button !== 0) return;
     drag.on = true; drag.moved = false; drag.id = e.pointerId;
     drag.x = drag.last = e.clientX; drag.y = e.clientY;
+    drag.start = manual; drag.t0 = performance.now();
   });
   window.addEventListener('pointermove', (e) => {
     if (!drag.on || e.pointerId !== drag.id) return;
@@ -426,7 +427,14 @@
     drag.on = false;
     document.body.style.cursor = '';
     if (drag.moved) {
-      snap();
+      // 짧게 밀어도(약 40px 이상 또는 빠르게 튕기면) 한 칸 넘어감 — 휴대폰 스와이프용
+      const dxPx = (drag.start - manual) * spacing;
+      const fast = Math.abs(dxPx) / Math.max(1, performance.now() - drag.t0) > 0.35;
+      if (Math.abs(dxPx) > 40 || (fast && Math.abs(dxPx) > 12)) {
+        const base = Math.round(scrollOff + drag.start) - scrollOff;
+        manual = base + (dxPx > 0 ? -1 : 1);
+      } else snap();
+      lastInteract = performance.now();
       setTimeout(() => { drag.moved = false; }, 0);
     }
   };
