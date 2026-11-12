@@ -16,7 +16,7 @@ window.PROJECTS = [
     title: 'NaverWhale Redesign',
     role: 'UI/UX Designer',
     year: '2024',
-    category: 'Prototype, UX Research, Wireframe',
+    category: 'Prototype · UX Research · Wireframe',
     tags: 'Product · Web',
     thumb: 'assets/thumbs/whale.svg',
     shape: 2,
@@ -25,7 +25,7 @@ window.PROJECTS = [
   {
     id: 'adobe',
     title: 'Adobe Ambassador @ U of U',
-    role: 'President, Vice-President',
+    role: 'President · Vice-President',
     year: '2025 - 2026',
     category: 'Student Leader',
     tags: 'Organization',
