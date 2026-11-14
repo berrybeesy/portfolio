@@ -17,7 +17,7 @@
   --line: #BCBCBC;
   --muted: #7A7A7A;
   --g: clamp(16px, 2.2vw, 44px);
-  --m: 100px;   /* 콘텐츠 섹션 좌우 여백 = 이름 섹션 TERESA PARK 여백과 동일 */
+  --m: var(--g);   /* 콘텐츠 섹션 좌우 여백 = 히어로 섹션 여백과 동일 */
   --ease-out: cubic-bezier(.2, .8, .2, 1);
   --ease-io: cubic-bezier(.7, 0, .2, 1);
 }
@@ -675,7 +675,6 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 }
 .footer__phys.is-dragging, .footer__phys.is-dragging .fl { cursor: grabbing; }
 
-@media (max-width: 1023px) { :root { --m: 48px; } }
 @media (max-width: 720px) {
   :root { --m: var(--g); }
   .scroll-hint { display: none; }
