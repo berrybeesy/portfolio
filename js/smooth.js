@@ -11,6 +11,11 @@
     gestureOrientation: 'vertical',                           // 가로 스와이프는 캐러셀이 받음
   });
   window.lenis = lenis;
+  // 로딩 화면이 떠 있는 동안은 스크롤 멈춤
+  if (document.documentElement.classList.contains('is-loading')) {
+    lenis.stop();
+    window.addEventListener('loaderdone', () => lenis.start(), { once: true });
+  }
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
