@@ -18,7 +18,7 @@ window.PROJECTS = [
     year: '2024',
     category: 'Prototype · UX Research · Wireframe',
     tags: 'Product · Web',
-    thumb: 'assets/projects/naverwhale/thumb.webp',
+    thumb: 'assets/projects/naverwhale/thumb.webp?v=2',
     shape: 2,
     link: '#',
   },
@@ -38,7 +38,7 @@ window.PROJECTS = [
 // WORKS 리스트 (호버하면 사각형 썸네일)
 window.WORKS = [
   { id: 'moment', title: 'MOMENT', tag: 'UXUI', thumb: 'assets/projects/moment/03.webp', link: '#' },
-  { id: 'naverwhale', title: 'NAVERWHALE', tag: 'UXUI', thumb: 'assets/projects/naverwhale/thumb.webp', link: '#' },
+  { id: 'naverwhale', title: 'NAVERWHALE', tag: 'UXUI', thumb: 'assets/projects/naverwhale/thumb.webp?v=2', link: '#' },
   { id: 'adobe', title: 'ADOBE AMBASSADOR', tag: 'blog', thumb: 'assets/projects/adobe/join.webp', link: '#' },
 ];
 
@@ -94,7 +94,7 @@ window.PROJECT_DETAILS = {
     gallery: [
       ['01', 1620], ['02', 810], ['03', 1995], ['04', 1620], ['05', 2190], ['06', 1620], ['07', 4214],
       ['08', 1620], ['09', 1796], ['10', 5802], ['11', 3632], ['12', 4917], ['13', 1620],
-    ].map(([n, h]) => ({ src: `assets/projects/naverwhale/${n}.webp`, w: 2880, h })),
+    ].map(([n, h]) => ({ src: `assets/projects/naverwhale/${n}.webp?v=2`, w: 2880, h })),
   },
   adobe: {
     title: 'Adobe Ambassador',
