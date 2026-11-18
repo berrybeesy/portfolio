@@ -49,7 +49,7 @@ window.PROJECT_DETAILS = {
   moment: {
     title: 'Moment',
     year: '2026',
-    device: 'Desktop, iPad',
+    device: 'Desktop, iPad, Mobile',
     timeline: 'Feb - Mar 2026 | 1 month',
     collaboration: '2 other developers',
     aboutTitle: 'About Moment',
