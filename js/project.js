@@ -65,6 +65,8 @@
     sb.hidden = !d.soonBig;
     sb.textContent = d.soonBig || '';
     const img = pv.querySelector('[data-pv-img]');
+    pv.querySelector('.pv__hero').hidden = !d.image;
+    pv.querySelector('.pv__caption').hidden = !(d.captionL || d.captionR);
     img.src = d.image || '';
     img.alt = d.title || '';
     // 케이스 스터디 이미지: Figma에서 내보낸 이미지를 위에서부터 순서대로 꽉 차게 쌓음

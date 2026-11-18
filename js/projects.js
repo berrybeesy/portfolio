@@ -18,7 +18,7 @@ window.PROJECTS = [
     year: '2024',
     category: 'Prototype · UX Research · Wireframe',
     tags: 'Product · Web',
-    thumb: 'assets/thumbs/whale.svg',
+    thumb: 'assets/projects/naverwhale/thumb.webp',
     shape: 2,
     link: '#',
   },
@@ -38,7 +38,7 @@ window.PROJECTS = [
 // WORKS 리스트 (호버하면 사각형 썸네일)
 window.WORKS = [
   { id: 'moment', title: 'MOMENT', tag: 'UXUI', thumb: 'assets/projects/moment/03.webp', link: '#' },
-  { id: 'naverwhale', title: 'NAVERWHALE', tag: 'UXUI', thumb: 'assets/thumbs/whale.svg', link: '#' },
+  { id: 'naverwhale', title: 'NAVERWHALE', tag: 'UXUI', thumb: 'assets/projects/naverwhale/thumb.webp', link: '#' },
   { id: 'adobe', title: 'ADOBE AMBASSADOR', tag: 'blog', thumb: 'assets/projects/adobe/join.webp', link: '#' },
 ];
 
@@ -87,9 +87,14 @@ window.PROJECT_DETAILS = {
       'Proposed a simplified 3-step theme flow based on research findings to reduce friction.',
     ],
     note: 'Incheon, South Korea · UX Research 50% · Prototype 30% · UX Design 20%',
-    image: 'assets/thumbs/whale.svg',
-    captionL: 'Redesigning Customization Experience',
-    captionR: 'UX/UI',
+    image: '',                       // 표지가 케이스 스터디 첫 장에 들어 있어서 따로 안 씀
+    captionL: '',
+    captionR: '',
+    // 케이스 스터디 (Figma 'NaverWhale' main 프레임을 섹션별로 내보냄, 위에서부터 순서대로)
+    gallery: [
+      ['01', 1620], ['02', 810], ['03', 1995], ['04', 1620], ['05', 2190], ['06', 1620], ['07', 4214],
+      ['08', 1620], ['09', 1796], ['10', 5802], ['11', 3632], ['12', 4917], ['13', 1620],
+    ].map(([n, h]) => ({ src: `assets/projects/naverwhale/${n}.webp`, w: 2880, h })),
   },
   adobe: {
     title: 'Adobe Ambassador',
