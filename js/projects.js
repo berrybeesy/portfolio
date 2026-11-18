@@ -38,8 +38,8 @@ window.PROJECTS = [
 // WORKS 리스트 (호버하면 사각형 썸네일)
 window.WORKS = [
   { id: 'moment', title: 'MOMENT', tag: 'UXUI', thumb: 'assets/projects/moment/03.webp', link: '#' },
-  { id: 'naverwhale', title: 'NAVERWHALE', tag: 'UXUI', thumb: 'assets/projects/naverwhale/thumb.webp?v=2', link: '#' },
-  { id: 'adobe', title: 'ADOBE AMBASSADOR', tag: 'blog', thumb: 'assets/projects/adobe/join.webp', link: '#' },
+  { id: 'naverwhale', title: 'NAVERWHALE', tag: 'UXUI', thumb: 'assets/projects/naverwhale/works.webp', link: '#' },
+  { id: 'adobe', title: 'ADOBE AMBASSADOR', tag: 'blog', thumb: 'assets/projects/adobe/works.webp', link: '#' },
 ];
 
 // 프로젝트 상세 페이지 내용 (프로젝트를 누르면 같은 자리에서 검정 화면으로 전환되며 열림)
